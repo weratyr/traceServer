@@ -7,6 +7,10 @@
 
 #ifndef TRACERSERVER_H_
 #define TRACERSERVER_H_
+#include <iostream>
+#include <queue>
+#include <vector>
+#include <pthread.h>
 
 #include "socket/CInetAddr.h"
 #include "socket/CSockAcceptor.h"
@@ -17,6 +21,7 @@
 #include "CCommQueue.h"
 #include "Global.h"
 #include "CMessage.h"
+
 
 
 
@@ -35,5 +40,6 @@ enum Component_Index
 };
 
 void swapQueue(CCommQueue &send_Queue, CCommQueue &recv_Queue);
+void *foo(void * arg);
 
 #endif /* TRACERSERVER_H_ */
